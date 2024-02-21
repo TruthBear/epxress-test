@@ -4,9 +4,10 @@
 // notice/{게시물아이디}/edit -> 수정페이지
 // notice/{게시물아이디}/delete -> 삭제페이지
 
+import Notice from "../models/notice";
 
 
-export const Notice = {
+export const NoticeObj = {
   list : async (req, res) => {
     try{
      return res.send({name: "list"});
