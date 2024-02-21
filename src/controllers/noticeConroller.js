@@ -28,7 +28,7 @@ export const Notice = {
       console.log(err);
       return res.send({ result: false });
     }
-  };,
+  },
   detail : (req, res) => res.send("notice detail"),
   edit : (req, res) => res.send("notice edit"),
   delete : (req, res) => res.send("notice delete"),
