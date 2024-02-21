@@ -16,6 +16,7 @@ export const NoticeObj = {
     };
   },
   write : async (req, res) => {
+    console.log(req.body);
     try {
       const { title, description, writer } = req.body;
       const data = await Notice.create({

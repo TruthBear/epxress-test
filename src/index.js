@@ -1,4 +1,5 @@
-import 'dotenv/config'
+import 'dotenv/config';
+import './db'
 import express from "express";
 import morgan from "morgan";
 import cors from "cors";
@@ -16,6 +17,7 @@ const corsOptions = {
 const app = express();
 const port = process.env.PORT;
 
+app.use(express.json());
 app.use(morgan("dev"));
 app.use(cors(corsOptions));
 
