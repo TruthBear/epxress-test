@@ -6,6 +6,7 @@ import cors from "cors";
 import appleRouter from './routers/appleRouter';
 import testRouter from './routers/testRouter';
 import noticeRouter from './routers/noticeRouter';
+import commentRouter from './routers/commentRouter';
 
 const corsOptions = {
   origin: [
@@ -23,8 +24,8 @@ app.use(cors(corsOptions));
 
 app.get('/', (req, res) => res.send({name: "Choi"}));
 app.use('/test', testRouter);
-app.use('/apple', appleRouter);
 app.use('/notice', noticeRouter);
+app.use('/comment', commentRouter);
 
 
 app.listen(port, ()=>{
